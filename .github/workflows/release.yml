@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write  # Add this permissions section
+
 jobs:
   build:
     runs-on: macos-latest
