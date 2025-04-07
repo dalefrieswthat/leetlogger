@@ -1,0 +1,60 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: Build macOS app
+        run: |
+          # Run the app creation script
+          bash create_app.sh
+          
+          # Create DMG file
+          mkdir -p LeetLogger_dmg
+          cp -R LeetLogger.app LeetLogger_dmg/
+          ln -s /Applications LeetLogger_dmg/
+          hdiutil create -volname "LeetLogger" -srcfolder LeetLogger_dmg -ov -format UDZO LeetLogger.dmg
+          rm -rf LeetLogger_dmg
+          
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: LeetLogger.dmg
+          body: |
+            # LeetLogger ${{ github.ref_name }}
+            
+            A desktop application for tracking your LeetCode problem-solving progress.
+            
+            ## Features
+            - Track daily LeetCode problems
+            - Save notes for each problem
+            - Track completion rate and streaks
+            - Filter out premium problems
+            - Get daily notifications for new problems
+            
+            ## Installation
+            1. Download the DMG file
+            2. Open the DMG file
+            3. Drag LeetLogger to your Applications folder
+            4. When first launching, right-click and select "Open"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
