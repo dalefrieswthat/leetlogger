@@ -1,0 +1,26 @@
+Starting LeetLogger at Mon Apr  7 13:36:12 CDT 2025
+Current directory: /Users/daleyarborough/dayone
+Python version: Python 3.13.2
+Checking for required files:
+total 2344
+drwxr-xr-x  19 daleyarborough  staff      608 Apr  7 13:35 .
+drwxr-x---+ 90 daleyarborough  staff     2880 Apr  7 13:36 ..
+-rw-r--r--   1 daleyarborough  staff  1117129 Apr  7 13:08 LeetLogger.png
+-rw-r--r--   1 daleyarborough  staff     1230 Apr  7 12:30 README.md
+drwxr-xr-x   7 daleyarborough  staff      224 Apr  7 13:35 __pycache__
+-rw-r--r--   1 daleyarborough  staff     2436 Apr  7 12:45 backup_manager.py
+drwxr-xr-x   2 daleyarborough  staff       64 Apr  7 12:46 backups
+-rwxr-xr-x   1 daleyarborough  staff     2237 Apr  7 13:10 create_app.sh
+-rwxr-xr-x   1 daleyarborough  staff     1349 Apr  7 13:02 create_app_simple.sh
+-rw-r--r--   1 daleyarborough  staff      376 Apr  7 12:59 icon.svg
+-rw-r--r--   1 daleyarborough  staff      743 Apr  7 13:35 launch.py
+-rw-r--r--   1 daleyarborough  staff     2918 Apr  7 12:31 leetcode_client.py
+-rw-r--r--   1 daleyarborough  staff      159 Apr  7 13:36 leetlogger.log
+-rw-r--r--   1 daleyarborough  staff    25653 Apr  7 13:24 main.py
+-rw-r--r--   1 daleyarborough  staff     1457 Apr  7 12:32 notification_manager.py
+-rw-r--r--   1 daleyarborough  staff       79 Apr  7 12:35 requirements.txt
+-rwxr-xr-x   1 daleyarborough  staff      678 Apr  7 13:36 run_leetlogger.sh
+-rw-r--r--   1 daleyarborough  staff     5338 Apr  7 12:38 statistics_manager.py
+drwxr-xr-x   7 daleyarborough  staff      224 Apr  7 12:36 venv
+Starting main application...
+Script ended at Mon Apr  7 13:36:29 CDT 2025

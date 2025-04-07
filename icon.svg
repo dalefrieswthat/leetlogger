@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1024" height="1024" rx="200" fill="#4CAF50"/>
+    
+    <!-- White circle for contrast -->
+    <circle cx="512" cy="512" r="400" fill="#ffffff"/>
+    
+    <!-- Green L -->
+    <path d="M362 312 L362 712 L662 712" 
+          stroke="#4CAF50" 
+          stroke-width="100" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          fill="none"/>
+</svg> 
